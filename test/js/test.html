@@ -41,6 +41,12 @@
     assert.equal(getScore(), 0);
   });
 
+  QUnit.test("backspacing over a '.' removes nothing from the score", function(assert){
+    enter('.')
+    backspace()
+    assert.equal(getScore(),0)
+  })
+
 
   function getScore() {
     return document.getElementById('score').innerHTML;
